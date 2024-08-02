@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Form</title>
+</head>
+<body>
+  <h1><%= car ? 'Edit Car' : 'Add New Car' %></h1>
+  <form action="<%= car ? '/admin/car/update/' + car._id : '/admin/car' %>" method="post">
+    <label for="name">Car Name:</label>
+    <input type="text" id="name" name="name" value="<%= car ? car.name : '' %>">
+    <label for="manufacturingYear">Manufacturing Year:</label>
+    <input type="number" id="manufacturingYear" name="manufacturingYear" value="<%= car ? car.manufacturingYear : '' %>">
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" value="<%= car ? car.price : '' %>">
+    <button type="submit"><%= car ? 'Update' : 'Create' %></button>
+  </form>
+</body>
+</html>

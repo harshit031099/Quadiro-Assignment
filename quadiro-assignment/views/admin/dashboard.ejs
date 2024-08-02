@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <p>Total Cars: <%= totalCars %></p>
+  <ul>
+    <% cars.forEach(car => { %>
+      <li><%= car.name %> - <%= car.manufacturingYear %> - $<%= car.price %></li>
+    <% }); %>
+  </ul>
+  <a href="/admin/car/new">Add New Car</a>
+</body>
+</html>
